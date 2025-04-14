@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 1px;
+            text-align: center;
+        }
+        th {
+            background-color: #000;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Product Catalog</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Smartphone</td>
+            <td><img src="https://onetreeplanted.org/cdn/shop/files/smartphone-photo-of-flower-1661526783759.webp?v=1738153903" alt="Smartphone"></td>
+            <td>100</td>
+            <td>Latest model with 6GB RAM and 128GB storage.</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td><img src="data:image/jpeg;base64,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" alt="Laptop"></td>
+            <td>200</td>
+            <td>High performance laptop with 16GB RAM and 512GB SSD.</td>
+            <td>Out of Stock</td>
+        </tr>
+        <tr>
+            <td>Wireless Headphones</td>
+            <td><img src="https://i.rtings.com/assets/products/626MziNk/hifiman-edition-xs/design-medium.jpg?format=auto"alt="Headphone"></td>
+            <td>199</td>
+            <td>Noise-canceling over-ear wireless headphones.</td>
+            <td>In Stock</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
