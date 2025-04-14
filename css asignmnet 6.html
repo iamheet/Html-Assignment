@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media and Shapes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f0f0f0;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        canvas, svg {
+            border: 2px solid #ccc;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Audio Example</h2>
+        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" autoplay loop muted controls></audio>
+    </section>
+
+    
+    <section>
+        <h2>Video Example</h2>
+        <video width="400" autoplay loop muted controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Canvas Shapes</h2>
+        <canvas id="myCanvas" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+        <h2>SVG Shapes</h2>
+        <svg width="400" height="200">
+            <!-- Rectangle -->
+            <rect x="10" y="10" width="100" height="50" fill="skyblue" stroke="black" stroke-width="2" />
+
+            <!-- Circle -->
+            <circle cx="200" cy="50" r="30" fill="tomato" stroke="black" stroke-width="2" />
+
+            <!-- Line -->
+            <line x1="300" y1="10" x2="380" y2="80" stroke="green" stroke-width="3" />
+        </svg>
+    </section>
+
+    <script>
+        // Drawing on Canvas
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw rectangle
+        ctx.fillStyle = "lightgreen";
+        ctx.fillRect(20, 20, 100, 50);
+
+        // Draw circle
+        ctx.beginPath();
+        ctx.arc(200, 50, 30, 0, Math.PI * 2);
+        ctx.fillStyle = "orange";
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw line
+        ctx.beginPath();
+        ctx.moveTo(300, 20);
+        ctx.lineTo(380, 80);
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
